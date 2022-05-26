@@ -30,6 +30,7 @@ function setRole(token,id,roleid){
 }
 
 var name = 'name';
+var role = 'role';
 const Accounts= () => {
     const { token, setToken } = useToken();
     const [info, setAccountInfo] = useState();
@@ -50,7 +51,15 @@ const Accounts= () => {
     }, []);
     console.log(info)
 
-  return (
+    if((info !== undefined) ? info.role != 'Admin' : false){
+        return(
+            <div className='text-center'>
+                <h4>You are not allowed to acces this panel</h4>
+            </div>
+        )
+    }
+
+    return (
         <>
         <div className='text-center'>
             <h4>Welcome {(info !== undefined) ? info.name : name}</h4>
