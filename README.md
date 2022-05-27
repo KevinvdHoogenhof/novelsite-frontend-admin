@@ -7,13 +7,13 @@ docker build -t novelsite/frontendadmin .
 
 Aanmaken van de container:
 
-docker run -d --rm -v /app/node_modules -p 3001:3001 -e CHOKIDAR_USEPOLLING=true --name frontend novelsite/frontendadmin
+docker run -d --rm -v /app/node_modules -p 3001:3000 -e CHOKIDAR_USEPOLLING=true --name frontend novelsite/frontendadmin
 
 ## Pull image van dockerhub
 
 docker pull kvdhoogenhof/novelsite-frontend-admin
 
-docker run -d --rm -v /app/node_modules -p 3001:3001 -e CHOKIDAR_USEPOLLING=true --name frontend kvdhoogenhof/novelsite-frontend-admin
+docker run -d --rm -v /app/node_modules -p 3001:3000 -e CHOKIDAR_USEPOLLING=true --name frontendadmin kvdhoogenhof/novelsite-frontend-admin
 
 
 # Getting Started with Create React App
