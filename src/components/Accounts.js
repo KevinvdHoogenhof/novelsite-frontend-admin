@@ -51,7 +51,7 @@ const Accounts= () => {
     }, []);
     console.log(info)
 
-    if((info !== undefined) ? info.role != 'Admin' : false){
+    if((info !== undefined) ? info.roleName != 'Admin' : false){
         return(
             <div className='text-center'>
                 <h4>You are not allowed to acces this panel</h4>
